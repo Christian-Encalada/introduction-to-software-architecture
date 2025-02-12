@@ -183,7 +183,7 @@ class MyCard extends React.Component{
                     <p style={{fontSize: '22px', fontWeight: 'bold'}} className="text text-success">Pedido realizado con éxito</p>
 
                     <Choose>
-                        <When condition={this.state.paymentMethod === 'CREDIT_CARD'} >
+                        <When condition={!!this.state.paymentMethod && this.state.paymentMethod === 'CREDIT_CARD'} >
                             <p>Tu pedido ha sido registrado con éxito, un email llegará a tu correo con los detalles de tu compra</p>
                         </When>
                         <Otherwise>
@@ -193,8 +193,8 @@ class MyCard extends React.Component{
                     <p>Pedido No: {this.state.order ? this.state.order.refNumber : ''}</p>
                     <div style={{textAlign: 'right'}}>
                         <Choose>
-                            <When condition={this.state.order && this.state.order.queued}>
-                                <Link to={"/"} className="btn btn-success" style={{marginRight: '10px'}}>Regresar</Link>
+                        <When condition={this.state.order && this.state.order.queued !== undefined}>
+                            <Link to={"/"} className="btn btn-success" style={{marginRight: '10px'}}>Regresar</Link>
                             </When>
                             <Otherwise>
                                 <button onClick={() => this.goToOrder()} className="btn btn-success" style={{marginRight: '10px'}}>Ver mi compra</button>

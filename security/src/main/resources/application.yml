@@ -34,7 +34,7 @@ mysql:
     host:     localhost
     database: security
     username: root
-    password: 1234
+    password: 12345
 eureka:
   instance:
     prefer-ip-address: true

@@ -54,8 +54,8 @@ class Themplete extends React.Component{
         return(
             <div>
                 <Choose>
-                    <When condition={this.state.login} >
-                        <nav className="navbar navbar-dark bg-dark">
+                <When condition={!!this.state.login} >
+                <nav className="navbar navbar-dark bg-dark">
                             <Link className="navbar-brand mb-0 h1" to={"/"}>
                                 <img src="/obb-logo-small.png" width="30" height="30" className="d-inline-block align-top" alt=""/>
                                 <span> E-Commerce </span>

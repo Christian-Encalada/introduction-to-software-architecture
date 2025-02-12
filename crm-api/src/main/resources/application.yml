@@ -30,18 +30,18 @@ spring:
     allow-bean-definition-overriding: true
     
   rabbitmq:
-    host: barnacle.rmq.cloudamqp.com
-    port: 5672
-    username: nccsiuvr
-    password: FEfDUd1TNNbe3rDWDaUgF5TgqVJM62iH
-    virtual-host: nccsiuvr
+    host: cow.rmq2.cloudamqp.com
+    port: 1883
+    username: nrcerzwp
+    password: ya6YRPxgKjdY0PUxpiETwyJE3xR6i7FQ
+    virtual-host: nrcerzwp
 mysql:
   service:
     port: 3306
     host: localhost
     database: crm
     username: root
-    password: 1234
+    password: 12345
 eureka:
   client:
     registerWithEureka: true
